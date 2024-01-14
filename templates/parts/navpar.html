@@ -1,0 +1,42 @@
+{% load static %}
+<nav class="nav">
+    <ul class="menu-nav">
+      <li class="menu-nav__item">
+        <a href="{% url 'index' %}" class="logo menu-nav__link">
+          <img src="{% static 'img/favicon.png' %}" />
+          
+          
+          <span class="logo-first">Drip</span>
+               <span class="logo-last">Cafe</span>
+             </a>
+      </li>
+      <li class="menu-nav__item">
+        <a href="{% url 'signin' %}" class="sign-in menu-nav__link">
+          <i class="fa fa-user" aria-hidden="true"></i>
+          Sign In
+        </a>
+        <span class="menu-nav__link" id="slash">/</span>
+        <a href="{% url 'signup' %}" class="sign-up menu-nav__link">
+          Sign Up
+        </a>
+      </li>
+      <br />
+      <li class="menu-nav__item active">
+        <a href="{% url 'index' %}" class="menu-nav__link"> Home </a>
+      </li>
+      <li class="menu-nav__item">
+        <a href="{% url 'menu' %}" class="menu-nav__link"> Menu </a>
+      </li>
+      <li class="menu-nav__item">
+        <a href="{% url 'services' %}" class="menu-nav__link"> Services </a>
+      </li>
+      <li class="menu-nav__item">
+        <a href="{% url 'contact' %}" class="menu-nav__link"> Contact </a>
+      </li>
+      <li class="menu-nav__item">
+        <a href="#!" class="menu-nav__link cart__openBtn">
+            <i class="fa fa-cart-plus" aria-hidden="true"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
