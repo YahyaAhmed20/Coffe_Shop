@@ -113,21 +113,8 @@
           <div class="pic-area-text">
             <div id="login-box">
               <form method ="post" action="" >
-                <label>Email: </label> <br />
-                <input type="email" name="email"  pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
-                  required
-                />
-                <br />
-                <label>Username: </label> <br />
-                <input type="text" name="username" pattern="[a-zA-Z0-9]+" required
-                />
-                <!-- minlength="10" does not work probably bc you need to use the submit button--><br />
-                <label>Password: </label> <br />
-                <input type="password" name="password"  /><br />
-                <br />
-                <div id="username-display"></div>
-
-
+                {% csrf_token %}
+                {{SF}}
             <button class="btn-order" id="sign-up-btn">Sign Up</button>
             </div>
             </form>
