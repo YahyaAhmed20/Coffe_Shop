@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from django .http import HttpResponse
+# from .models import Signup
 # Create your views here.
+
 
 
 def index(request):
@@ -18,6 +19,7 @@ def services(request):
     return render(request,'pages/services.html')
 
 def signin(request):
+    
     return render(request,'pages/signin.html')
 
 def signup(request):

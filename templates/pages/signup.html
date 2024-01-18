@@ -112,36 +112,26 @@
         <div class="pic-area">
           <div class="pic-area-text">
             <div id="login-box">
-              <form
-                id="login-form"
-                name="login-form"
-                action="index.html"
-                method="post"
-              >
+              <form method ="post" action="" >
                 <label>Email: </label> <br />
-                <input
-                  type="email"
-                  name="email"
-                  id="emailid"
-                  pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+                <input type="email" name="email"  pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
                   required
                 />
                 <br />
                 <label>Username: </label> <br />
-                <input
-                  type="text"
-                  name="userid"
-                  id="userid"
-                  pattern="[a-zA-Z0-9]+"
-                  required
+                <input type="text" name="username" pattern="[a-zA-Z0-9]+" required
                 />
                 <!-- minlength="10" does not work probably bc you need to use the submit button--><br />
                 <label>Password: </label> <br />
-                <input type="password" name="pswrd" id="pswrd" /><br />
+                <input type="password" name="password"  /><br />
                 <br />
-              </form>
-              <div id="username-display"></div>
-              <button class="btn-order" id="sign-up-btn">Sign Up</button>
+                <div id="username-display"></div>
+
+
+            <button class="btn-order" id="sign-up-btn">Sign Up</button>
+            </div>
+            </form>
+              
             </div>
             <div class="icons">
               <a href="#!">

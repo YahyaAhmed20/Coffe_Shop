@@ -13,7 +13,7 @@
    <link rel="icon" href="{% static 'img/favicon.png' %}" />
  </head>
  <body>
-   {% block content %}
+{% block content %}
 
     
    <header>
@@ -173,5 +173,6 @@
    ></script>
  </body>
 </html>
-{% endblock content   %}
 {% include 'parts/footer.html' %}
+
+{% endblock content   %}
