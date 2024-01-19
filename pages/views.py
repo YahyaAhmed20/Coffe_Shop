@@ -15,6 +15,8 @@ def contact(request):
     return render(request,'pages/contact.html')
 
 def menu(request):
+  
+  
     return render(request,'pages/menu.html')
 
 

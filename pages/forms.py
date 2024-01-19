@@ -2,7 +2,6 @@ from django import forms
 from .models import SignUp
 from .models import SignIn
 
-
 class SignupForm(forms.ModelForm):
     class Meta:
         model=SignUp
@@ -14,3 +13,5 @@ class SigninForm(forms.ModelForm):
         model=SignIn
         
         fields='__all__'
+        
+        
