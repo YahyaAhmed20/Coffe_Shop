@@ -1,6 +1,8 @@
 from django.shortcuts import render,redirect
 from .models import SignUp
 from .forms import SignupForm
+from .forms import SigninForm
+from .forms import SignIn
 # from .models import Signup
 # Create your views here.
 
@@ -22,7 +24,16 @@ def services(request):
 
 def signin(request):
     
-    return render(request,'pages/signin.html')
+    if request.method == 'POST':
+            form = SigninForm(request.POST)
+            if form.is_valid():
+                form.save()
+                return redirect('index')
+            else:
+                form = SigninForm()
+    
+    
+    return render(request,'pages/signin.html',{'SI':SigninForm})
 
 def signup(request):
     

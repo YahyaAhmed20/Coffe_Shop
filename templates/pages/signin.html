@@ -112,27 +112,15 @@
         <div class="pic-area">
           <div class="pic-area-text">
             <div id="login-box">
-              <form
-                id="login-form"
-                name="login-form"
-                action="index.html"
-                method="post"
-              >
-                <label>Username: </label> <br />
-                <input
-                  type="text"
-                  name="userid"
-                  id="userid"
-                  pattern="[a-zA-Z0-9]+"
-                  required
-                />
-                <!-- minlength="10" does not work probably bc you need to use the submit button--><br />
-                <label>Password: </label> <br />
-                <input type="password" name="pswrd" id="pswrd" /><br />
-                <br />
+              <form method ="post" action="" >       
+                {% csrf_token %}
+                {{SI}}
+                <button class="btn-order" id="login-btn">Login</button>
+
               </form>
-              <div id="username-display"></div>
-              <button class="btn-order" id="login-btn">Login</button>
+              {% comment %} <div id="username-display"></div> {% endcomment %}
+
+
             </div>
             <div class="icons">
               <a href="#!">

@@ -13,3 +13,16 @@ class SignUp(models.Model):
     
     class Meta:
         verbose_name='SignUp User'
+        
+        
+        
+class SignIn(models.Model):
+        usernamee = models.CharField(max_length=20, blank=True)
+        passwordd = models.CharField(max_length=30, null=True)
+        
+        def __str__(self):
+            return self.usernamee
+        
+        class Meta:
+            verbose_name='SignIn User'
+
