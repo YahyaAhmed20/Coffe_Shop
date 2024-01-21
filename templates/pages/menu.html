@@ -120,6 +120,9 @@
               with an extra shot.
             </div>
             <img src="{% static 'img/caffe-americano.jpg' %}" alt="Caffè Americano" />
+
+           
+            {% comment %} <img src="{% static 'img/caffe-americano.jpg' %}" alt="Caffè Americano" /> {% endcomment %}
             <div class="nutritional_info">
               <h2><span class="span-primary">Nutritional</span> Information</h2>
               <div class="bar-large">Serving Size 16 fl oz</div>
@@ -972,7 +975,10 @@
         <div class="flex">
           <div class="box">
             <div class="img-container">
-              <img src="{% static 'img/caffe-americano.jpg' %}" alt="Caffè Americano" />
+              {% for x in pro %}
+              <img src="{{x.image.url}}" alt="{{x.name}}" />
+
+              {% endfor %}
               <div class="box__btns">
                 <a href="#!" class="box__btn one__view__openBtn">
                   View
@@ -982,13 +988,17 @@
                 </a>
               </div>
             </div>
-            <h2>Caffè Americano</h2>
-            <h3>$2.10</h3>
+            {% for x in pro %}
+            <h2>{{x.name}}</h2>
+            <h3>{{x.price}}</h3>
+            {% endfor %}
           </div>
           <div class="box">
             <div class="img-container">
-              <img src="{% static 'img/caffe-misto.jpg' %}" alt="Caffe Misto" />
-              <div class="box__btns">
+              {% for x in pro %}
+              <img src="{{x.image.url}}" alt="{{x.name}}" />
+
+              {% endfor %}              <div class="box__btns">
                 <a href="#!" class="box__btn two__view__openBtn">
                   View
                 </a>
@@ -997,15 +1007,19 @@
                 </a>
               </div>
             </div>
-            <h2>Caffè Misto</h2>
-            <h3>$2.60</h3>
+            {% for x in pro %}
+            <h2>{{x.name}}</h2>
+            <h3>{{x.price}}</h3>
+            {% endfor %}
           </div>
           <div class="box">
             <div class="img-container">
-              <img
-                src="{% static 'img/caffe-americano.jpg' %}"
-                alt="Blonde Caffè Americano"
-              />
+              
+              {% for x in pro %}
+              
+              <img src="{{x.image.url}}" alt="{{x.name}}" />
+
+              {% endfor %}  
               <div class="box__btns">
                 <a href="#!" class="box__btn three__view__openBtn">
                   View
@@ -1015,13 +1029,17 @@
                 </a>
               </div>
             </div>
-            <h2>Blonde Caffè Americano</h2>
-            <h3>$2.79</h3>
+            {% for x in pro %}
+            <h2>{{x.name}}</h2>
+            <h3>{{x.price}}</h3>
+            {% endfor %}
           </div>
           <div class="box">
             <div class="img-container">
-              <img src="{% static 'img/dark-roast-coffee.jpg' %}" alt="Blonde Roast" />
-              <div class="box__btns">
+              {% for x in pro %}
+              <img src="{{x.image.url}}" alt="{{x.name}}" />
+
+              {% endfor %}              <div class="box__btns">
                 <a href="#!" class="box__btn four__view__openBtn">
                   View
                 </a>
@@ -1030,13 +1048,17 @@
                 </a>
               </div>
             </div>
-            <h2>Blonde Roast</h2>
-            <h3>$2.05</h3>
+            {% for x in pro %}
+            <h2>{{x.name}}</h2>
+            <h3>{{x.price}}</h3>
+            {% endfor %}
           </div>
           <div class="box">
             <div class="img-container">
-              <img src="{% static 'img/dark-roast-coffee.jpg' %}" alt="Dark Roast Coffee" />
-              <div class="box__btns">
+              {% for x in pro %}
+              <img src="{{x.image.url}}" alt="{{x.name}}" />
+
+              {% endfor %}              <div class="box__btns">
                 <a href="#!" class="box__btn five__view__openBtn">
                   View
                 </a>
@@ -1045,12 +1067,18 @@
                 </a>
               </div>
             </div>
-            <h2>Dark Roast Coffee</h2>
-            <h3>$2.20</h3>
+            {% for x in pro %}
+            <h2>{{x.name}}</h2>
+            <h3>{{x.price}}</h3>
+            {% endfor %}
           </div>
           <div class="box">
             <div class="img-container">
-              <img src="{% static 'img/dark-roast-coffee.jpg' %}" alt="Pike Place® Roast" />
+              {% for x in pro %}
+              
+              <img src="{{x.image.url}}" alt="{{x.name}}" />
+
+              {% endfor %}  
               <div class="box__btns">
                 <a href="#!" class="box__btn six__view__openBtn">
                   View
@@ -1060,15 +1088,18 @@
                 </a>
               </div>
             </div>
-            <h2>Pike Place® Roast</h2>
-            <h3>$2.80</h3>
+            {% for x in pro %}
+            <h2>{{x.name}}</h2>
+            <h3>{{x.price}}</h3>
+            {% endfor %}
           </div>
           <div class="box">
             <div class="img-container">
-              <img
-                src="{% static 'img/dark-roast-coffee.jpg' %}"
-                alt="Decaf Pike Place® Roast"
-              />
+              {% for x in pro %}
+              
+              <img src="{{x.image.url}}" alt="{{x.name}}" />
+
+              {% endfor %}  
               <div class="box__btns">
                 <a href="#!" class="box__btn seven__view__openBtn">
                   View
@@ -1078,13 +1109,18 @@
                 </a>
               </div>
             </div>
-            <h2>Decaf Pike Place® Roast</h2>
-            <h3>$2.25</h3>
+            {% for x in pro %}
+            <h2>{{x.name}}</h2>
+            <h3>{{x.price}}</h3>
+            {% endfor %}
           </div>
           <div class="box">
             <div class="img-container">
-              <img src="{% static 'img/cappuccino.jpg' %}" alt="Cappuccino" />
-              <div class="box__btns">
+              {% for x in pro %}
+              
+              <img src="{{x.image.url}}" alt="{{x.name}}" />
+
+              {% endfor %}                <div class="box__btns">
                 <a href="#!" class="box__btn eight__view__openBtn">
                   View
                 </a>
@@ -1093,13 +1129,18 @@
                 </a>
               </div>
             </div>
-            <h2>Cappuccino</h2>
-            <h3>$2.59</h3>
+            {% for x in pro %}
+            <h2>{{x.name}}</h2>
+            <h3>{{x.price}}</h3>
+            {% endfor %}
           </div>
           <div class="box">
             <div class="img-container">
-              <img src="{% static 'img/cappuccino.jpg' %}" alt="Blonde Cappuccino" />
-              <div class="box__btns">
+              {% for x in pro %}
+              
+              <img src="{{x.image.url}}" alt="{{x.name}}" />
+
+              {% endfor %}                <div class="box__btns">
                 <a href="#!" class="box__btn nine__view__openBtn">
                   View
                 </a>
@@ -1108,13 +1149,18 @@
                 </a>
               </div>
             </div>
-            <h2>Blonde Cappuccino</h2>
-            <h3>$2.34</h3>
+            {% for x in pro %}
+            <h2>{{x.name}}</h2>
+            <h3>{{x.price}}</h3>
+            {% endfor %}
           </div>
           <div class="box">
             <div class="img-container">
-              <img src="{% static 'img/espresso.jpg' %}" alt="Espresso" />
-              <div class="box__btns">
+              {% for x in pro %}
+              
+              <img src="{{x.image.url}}" alt="{{x.name}}" />
+
+              {% endfor %}                <div class="box__btns">
                 <a href="#!" class="box__btn ten__view__openBtn">
                   View
                 </a>
@@ -1123,15 +1169,18 @@
                 </a>
               </div>
             </div>
-            <h2>Espresso</h2>
-            <h3>$2.89</h3>
+            {% for x in pro %}
+            <h2>{{x.name}}</h2>
+            <h3>{{x.price}}</h3>
+            {% endfor %}
           </div>
           <div class="box">
             <div class="img-container">
-              <img
-                src="{% static 'img/espresso-macchiato.jpg' %}"
-                alt="Espresso Macchiato"
-              />
+              {% for x in pro %}
+              
+              <img src="{{x.image.url}}" alt="{{x.name}}" />
+
+              {% endfor %}  
               <div class="box__btns">
                 <a href="#!" class="box__btn eleven__view__openBtn">
                   View
@@ -1141,13 +1190,18 @@
                 </a>
               </div>
             </div>
-            <h2>Espresso Macchiato</h2>
-            <h3>$2.18</h3>
+            {% for x in pro %}
+            <h2>{{x.name}}</h2>
+            <h3>{{x.price}}</h3>
+            {% endfor %}
           </div>
           <div class="box">
             <div class="img-container">
-              <img src="{% static 'img/flat-white.jpg' %}" alt="Flat White" />
-              <div class="box__btns">
+              {% for x in pro %}
+              
+              <img src="{{x.image.url}}" alt="{{x.name}}" />
+
+              {% endfor %}                <div class="box__btns">
                 <a href="#!" class="box__btn twelve__view__openBtn">
                   View
                 </a>
@@ -1156,8 +1210,10 @@
                 </a>
               </div>
             </div>
-            <h2>Flat White</h2>
-            <h3>$2.75</h3>
+            {% for x in pro %}
+            <h2>{{x.name}}</h2>
+            <h3>{{x.price}}</h3>
+            {% endfor %}
           </div>
         </div>
         

@@ -27,6 +27,12 @@ class SignIn(models.Model):
             verbose_name='SignIn User'
 
 
+class Product(models.Model):
+    name = models.CharField(max_length=150)
+    price = models.DecimalField(max_digits=6, decimal_places=2, help_text="Price in USD")
+    # add image
+    image = models.ImageField(upload_to='photos/%y/%m/%d')
+    active=models.BooleanField(default=True)
 
 
    

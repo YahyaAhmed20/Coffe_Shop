@@ -3,6 +3,7 @@ from .models import SignUp
 from .forms import SignupForm
 from .forms import SigninForm
 from .forms import SignIn
+from .models import Product
 # from .models import Signup
 # Create your views here.
 
@@ -16,8 +17,9 @@ def contact(request):
 
 def menu(request):
   
+    
   
-    return render(request,'pages/menu.html')
+    return render(request,'pages/menu.html',{'pro':Product.objects.all()})
 
 
 
